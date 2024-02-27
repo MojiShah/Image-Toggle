@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import ImageToggle from './components/ImageToggle';
 import './App.css';
 
+import city from './img/Jowhareh_galleries1.jpeg';
+import cityGray from './img/Jowhareh_galleries1_gray.jpeg';
+import nature from './img/Jowhareh_galleries2.jpeg';
+import natureGray from './img/Jowhareh_galleries2_gray.jpeg';
+
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ImageToggle primary={city} secondary={cityGray}/>
+      <ImageToggle primary={nature} secondary={natureGray}/>
     </div>
   );
 }
